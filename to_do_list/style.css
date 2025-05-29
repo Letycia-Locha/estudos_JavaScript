@@ -1,0 +1,90 @@
+/* Reset básico */
+* {    /* O asterisco é um seletor universal, ele pega todos os elementos da pagina */
+    margin: 0; /* Remove a margem padrão dos navegadores*/
+    padding: 0; /* Remove o espaçamento interno padrão */
+    box-sizing: border-box; /*Faz com que width e height incluam as bordas e paddings, facilitando o controle do layout.*/
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #4ba1f8;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /*Adiciona espaço interno no body*/
+    min-height: 100vh; /*Garante que o body ocupe no mínimo 100% da altura da tela (viewport height).*/
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Container do input e botão */
+.container-form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.container-form input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.container-form input:focus { /*destaca o input quando selecionado*/
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.container-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #002d4c;
+    color: white;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-form button:hover { /*mudança de cor do botão quando passa o mouse em cima*/
+    background-color: #000000;
+}
+
+/* Lista de tarefas */
+ul.list {
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+ul.list li {
+    background: white;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo opcional para botões de remover tarefa (caso tenha) */
+ul.list li button {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    font-weight: bold;
+    cursor: pointer;
+}
