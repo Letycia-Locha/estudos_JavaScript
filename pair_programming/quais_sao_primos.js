@@ -18,21 +18,3 @@ if (!/^\d+(,\d+)*$/.test(entrada)) {
     process.exit();
 }
 
-// Converter para array de números
-let numeros = entrada.split(",").map(Number);
-
-// Separar em primos e não primos
-let primos = [];
-let naoPrimos = [];
-
-for (let num of numeros) {
-    if (ehPrimo(num)) {
-        primos.push(num);
-    } else {
-        naoPrimos.push(num);
-    }
-}
-
-// Mostrar o resultado
-console.log(`${primos.join(", ")} são primos`);
-console.log(`${naoPrimos.join(", ")} não são primos`);

@@ -1,3 +1,5 @@
+//boa abordagem para códigos mais simples - verificação sequencial com flag booleana
+
 const prompt = require('prompt-sync')();
 
 let numero = parseInt(prompt('Digite um número: '));
@@ -19,8 +21,11 @@ if (isNaN(numero)) {
     }
 
     if (primo) {
-        console.log(`${numero}  o número é primo.`);
+        console.log(`${numero} é primo.`);
     } else {
-        console.log(`${numero} o número não é primo.`);
+        console.log(`${numero} não é primo.`);
     }
 }
+
+
+//

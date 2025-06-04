@@ -1,6 +1,7 @@
 // ampulheta_matriz_soma.js
 
 // Função que calcula a maior soma de uma ampulheta numa matriz 6x6
+//i é linha e j é coluna. Lembre-se de que o topo da ampulheta tem 3 colunas. Então o máximo é j2
 function hourglassSum(arr) {
     let maxSum = -63; // menor valor possível: -9 * 7
 
