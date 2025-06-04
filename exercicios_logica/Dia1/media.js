@@ -1,5 +1,3 @@
-// Programa que calcula a média de números decimais até o usuário digitar 0
-
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -7,27 +5,24 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-let soma = 0;
-let contador = 0;
+let soma = 0, contador = 0;
 
-function lerNumero() {
-  rl.question("Digite um número decimal (ou 0 para encerrar): ", function(entrada) {
-    const numero = parseFloat(entrada);
+const ler = () => {
+  rl.question("Digite um número decimal (ou 0 para encerrar): ", entrada => {
+    const n = parseFloat(entrada);
 
-    if (numero === 0) {
-      if (contador === 0) {
-        console.log("Nenhum número válido foi digitado.");
-      } else {
-        const media = soma / contador;
-        console.log(`Média aritmética: ${media.toFixed(2)}`);
-      }
+    if (n === 0) {
+      const msg = contador === 0
+        ? "Nenhum número válido foi digitado."
+        : `Média aritmética: ${(soma / contador).toFixed(2)}`;
+      console.log(msg);
       rl.close();
     } else {
-      soma += numero;
+      soma += n;
       contador++;
-      lerNumero(); // chama novamente
+      ler();
     }
   });
-}
+};
 
-lerNumero();
+ler();
